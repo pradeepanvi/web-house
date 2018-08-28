@@ -1,0 +1,146 @@
+<div class="container detail-sec">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="img_area">
+          <a href="#">
+            <img [src]="project.main_img">
+          </a>
+        </div>
+        <div class="role-list">
+          <ul class="row">
+            <li class="col-md-6" *ngIf="project.front_end"><i class="fa fa-gears fa-2x fa-fw"></i>Front-End Development</li>
+            <li class="col-md-6" *ngIf="project.psd_to_html"><i class="fa fa-gears fa-2x fa-fw"></i>PSD to HTML</li>
+            <li class="col-md-6" *ngIf="project.html5_css3_less"><i class="fa fa-gears fa-2x fa-fw"></i>HTML5/CSS3/LESS</li>
+            <li class="col-md-6" *ngIf="project.jquery"><i class="fa fa-gears fa-2x fa-fw"></i>jQuery</li>
+            <li class="col-md-6" *ngIf="project.pixel_perfect"><i class="fa fa-gears fa-2x fa-fw"></i>Pixel Perfect</li>
+            <li class="col-md-6" *ngIf="project.responsive"><i class="fa fa-gears fa-2x fa-fw"></i>Responsive</li>
+            <li class="col-md-6" *ngIf="project.seo_friendly"><i class="fa fa-gears fa-2x fa-fw"></i>SEO Friendly</li>
+            <li class="col-md-6" *ngIf="project.railo"><i class="fa fa-gears fa-2x fa-fw"></i>Railo</li>
+            <li class="col-md-6" *ngIf="project.testing"><i class="fa fa-gears fa-2x fa-fw"></i>Testing</li>
+            <li class="col-md-6" *ngIf="project.optimisation"><i class="fa fa-gears fa-2x fa-fw"></i>Optimisation</li>
+          </ul>
+        </div>
+        <div class="img_area">
+          <a href="#">
+            <img [src]="project.slider_img1">
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <h1>{{project.name}}</h1>
+        <p>{{project.detail}}</p>
+        <hr>
+        <span class="detail-container"><span class="detail-label">Client</span><span class="detail-value">{{project.client}}</span></span>
+        <span class="detail-container"><span class="detail-label">Link</span><span class="detail-value"><a href="{{project.link}}" target="_blank">{{project.link}}</a></span></span>
+      </div>
+    </div>
+  </div>
+  <p class="text-center"><a routerLink="edit" class="btn btn-info">Edit Project</a></p>
+  <div class="bottom-nav">
+    <div class="container">
+      <ul class="d-flex justify-content-between">
+        <li *ngIf="prevS"><a routerLink="../{{prev}}"><i class="material-icons">keyboard_arrow_left</i> Prev</a></li>
+        <li><a routerLink="../">Main Portfolio</a></li>
+        <li *ngIf="nextS"><a routerLink="../{{next}}">Next <i class="material-icons">keyboard_arrow_right</i></a></li>
+      </ul>
+    </div>
+  </div>
+
+
+<!-- <div class="container detail-sec">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="img_area">
+          <a href="#">
+            <img [src]="project.images[0].main_img">
+          </a>
+        </div>
+        <div class="role-list">
+          <ul class="row">
+            <li class="col-md-6" *ngIf="project.skills[0].front_end"><i class="fa fa-gears fa-2x fa-fw"></i>Front-End Development</li>
+            <li class="col-md-6" *ngIf="project.skills[0].psd_to_html"><i class="fa fa-gears fa-2x fa-fw"></i>PSD to HTML</li>
+            <li class="col-md-6" *ngIf="project.skills[0].html5_css3_less"><i class="fa fa-gears fa-2x fa-fw"></i>HTML5/CSS3/LESS</li>
+            <li class="col-md-6" *ngIf="project.skills[0].jquery"><i class="fa fa-gears fa-2x fa-fw"></i>jQuery</li>
+            <li class="col-md-6" *ngIf="project.skills[0].pixel_perfect"><i class="fa fa-gears fa-2x fa-fw"></i>Pixel Perfect</li>
+            <li class="col-md-6" *ngIf="project.skills[0].responsive"><i class="fa fa-gears fa-2x fa-fw"></i>Responsive</li>
+            <li class="col-md-6" *ngIf="project.skills[0].seo_friendly"><i class="fa fa-gears fa-2x fa-fw"></i>SEO Friendly</li>
+            <li class="col-md-6" *ngIf="project.skills[0].railo"><i class="fa fa-gears fa-2x fa-fw"></i>Railo</li>
+            <li class="col-md-6" *ngIf="project.skills[0].testing"><i class="fa fa-gears fa-2x fa-fw"></i>Testing</li>
+            <li class="col-md-6" *ngIf="project.skills[0].optimisation"><i class="fa fa-gears fa-2x fa-fw"></i>Optimisation</li>
+          </ul>
+        </div>
+        <div class="img_area">
+          <a href="#">
+            <img [src]="project.images[0].slider_img1">
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <h1>{{project.name}}</h1>
+        <p>{{project.detail}}</p>
+        <hr>
+        <span class="detail-container"><span class="detail-label">Client</span><span class="detail-value">{{project.client}}</span></span>
+        <span class="detail-container"><span class="detail-label">Link</span><span class="detail-value"><a href="{{project.link}}" target="_blank">{{project.link}}</a></span></span>
+      </div>
+    </div>
+  </div>
+  <p class="text-center"><a routerLink="edit" class="btn btn-info">Edit Project</a></p>
+  <div class="bottom-nav">
+    <div class="container">
+      <ul class="d-flex justify-content-between">
+        <li *ngIf="prevS"><a routerLink="../{{prev}}"><i class="material-icons">keyboard_arrow_left</i> Prev</a></li>
+        <li><a routerLink="../">Main Portfolio</a></li>
+        <li *ngIf="nextS"><a routerLink="../{{next}}">Next <i class="material-icons">keyboard_arrow_right</i></a></li>
+      </ul>
+    </div>
+  </div> -->
+
+
+<!-- <div class="container detail-sec">
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="img_area">
+        <a href="#">
+          <img src="../../../assets/images/projects/achva-detail.jpg">
+        </a>
+      </div>
+      <div class="role-list">
+        <ul class="row">
+          <li class="col-md-6"><i class="fa fa-gears fa-2x fa-fw"></i>Front-End Development</li>
+          <li class="col-md-6"><i class="fa fa-gears fa-2x fa-fw"></i>PSD to HTML</li>
+          <li class="col-md-6"><i class="fa fa-gears fa-2x fa-fw"></i>HTML5/CSS3/LESS</li>
+          <li class="col-md-6"><i class="fa fa-gears fa-2x fa-fw"></i>jQuery</li>
+          <li class="col-md-6"><i class="fa fa-gears fa-2x fa-fw"></i>Pixel Perfect</li>
+          <li class="col-md-6"><i class="fa fa-gears fa-2x fa-fw"></i>Responsive</li>
+          <li class="col-md-6"><i class="fa fa-gears fa-2x fa-fw"></i>SEO Friendly</li>
+          <li class="col-md-6"><i class="fa fa-gears fa-2x fa-fw"></i>Railo</li>
+          <li class="col-md-6"><i class="fa fa-gears fa-2x fa-fw"></i>Testing</li>
+          <li class="col-md-6"><i class="fa fa-gears fa-2x fa-fw"></i>Optimisation</li>
+        </ul>
+      </div>
+      <div class="img_area">
+        <a href="#">
+          <img src="../../../assets/images/projects/achva-inner.jpg">
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <h1>Chartered Banker Institute</h1>
+      <p>Freelance Front-End project for Pixl8 Interactive<br>
+        PSD to HTML, HTML5, LESS, CSS3, JavaScript, jQuery, Responsive, Testing, Railo<br>
+        30+ templates</p>
+      <hr>
+      <span class="detail-container"><span class="detail-label">Client</span><span class="detail-value">Pixl8 Digital Agency London</span></span>
+      <span class="detail-container"><span class="detail-label">Link</span><span class="detail-value"><a href="https://www.charteredbanker.com/" target="_blank">www.charteredbanker.com</a></span></span>
+    </div>
+  </div>
+</div>
+<div class="bottom-nav">
+  <div class="container">
+    <ul class="d-flex justify-content-between">
+      <li><a href="#"><i class="material-icons">keyboard_arrow_left</i> Prev</a></li>
+      <li><a href="#">Main Portfolio</a></li>
+      <li><a href="#">Next <i class="material-icons">keyboard_arrow_right</i></a></li>
+    </ul>
+  </div>
+</div> -->

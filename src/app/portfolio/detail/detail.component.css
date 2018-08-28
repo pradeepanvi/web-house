@@ -1,0 +1,69 @@
+ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+.detail-sec{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    font-size: 15px;
+}
+.detail-sec h1{
+    font-size: 24px;
+    color: #373737;
+    margin-bottom:20px;
+}
+.detail-sec .detail-container {
+	display: table;
+	table-layout: fixed;
+}
+.detail-sec .detail-container .detail-label {
+	min-width: 108px;
+    display: table-cell;
+    font-weight: bold;
+    color: #373737;
+}
+.detail-sec .detail-container .detail-value {
+	display: table-cell;
+}
+.detail-sec .detail-container a {
+	font-weight: 400;
+}
+
+.role-list{
+    font-size: 17px;
+    padding-top: 50px;
+    padding-bottom:50px;
+}
+.role-list li{
+    margin-top: 20px;
+    margin-bottom:20px;
+    position: relative;
+    padding-left: 70px;
+}
+.role-list li i{
+    margin-left: -70px;
+    margin-right: 20px;
+    color: #ff8e3f;
+}
+
+.bottom-nav{
+    border-top: 1px solid #eaeaea;
+    background: #f7f7f7;
+    padding: 20px 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #373737;
+}
+.bottom-nav i{
+    vertical-align: top;
+}
+.bottom-nav a:hover{
+    color:#ff8e3f; 
+}
+.bottom-nav li:first-child a:hover i{
+    margin-right: -8px;
+}
+.bottom-nav li:last-child a:hover i{
+    margin-left: -8px;
+}

@@ -1,0 +1,39 @@
+.form_sec{
+    background: #fff;
+    box-shadow: 0px 0px 3px #ccc;
+    padding: 20px;
+    margin-top: 70px;
+}
+.form_sec aside{
+    margin-bottom:20px;
+}
+.form_sec p.head{
+    color: #ff8e3f;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+.form_sec p.head + p{
+    font-size: 80%;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.example-margin {
+    margin: 0 10px;
+}
+
+.btn{
+    color:#fff;
+    background:#ff8e3f;
+}
+.checkboxes label{
+    font-size: 16px;
+}

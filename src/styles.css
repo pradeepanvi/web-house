@@ -1,1 +1,171 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~font-awesome/css/font-awesome.css";
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body{
+    font-size: 18px;
+    color:#777777;
+}
+*{
+    transition: 0.2s all;
+}
+a, a:hover{
+    color: inherit;
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+h2{
+    color:#303133;
+    position: relative;
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    font-weight: normal;
+}
+@media (max-width:767px){
+    h2{
+        font-size: 33px;
+        margin-bottom: 25px;
+    }
+}
+h2:after{
+    content: '';
+    position: absolute;
+    bottom:0;
+    left:50%;
+    width:90px;
+    height: 2px;
+    display: block;
+    margin-left:-45px;
+    background: #ff8e3f !important;
+}
+header{
+    background: #fff;
+    text-align: center;
+    font-size: 12px;
+    color:#303133;
+}
+@media (min-width:992px){
+    header{
+        position: fixed;
+        width: 300px;
+        height: 100%;
+        -webkit-box-shadow: 0 0px 7px -1px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0 0px 7px -1px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0px 7px -1px rgba(0, 0, 0, 0.1);
+        border-right: 1px solid #ccc;        
+    }
+    .wrapper{
+        padding-left:300px;
+    }
+}
+
+.banner{
+    background-image: url('assets/images/home_sec.jpg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 0 15px;
+}
+.head_txt_area{
+    padding:144px 36px;
+}
+@media (max-width:767px){
+    .head_txt_area{
+        padding:70px 36px;
+    }  
+}
+.project-list{
+    background: #F7F7F7;
+}
+.project-list .head_area{
+    padding: 36px;
+    font-weight: bold;
+    color: #303133;
+}
+.project-list .head_area a:hover{
+    color: #ff8e3f;    
+}
+.project-list .head_area p{
+    font-size: 12px;
+    margin:0;
+}
+.project-list .head_area h3{
+    font-size: 20px;
+    margin:0;
+}
+.project-list .img_area{
+    background: #EEEEEE;
+    position: relative;
+}
+.project-list .img_area .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    background: rgba(255, 142, 63, 0.7); 
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s all;
+}
+.project-list .img_area:hover .overlay{
+    opacity: 1;
+    visibility: visible;
+}
+@media (min-width:768px){
+    .project-list aside{
+        width: 50%;
+        float: left;
+    }
+}
+
+@media (min-width:992px){
+    .project-list aside{
+        width: 33.333%;
+    }
+}
+
+.what-we-do .mat-tab-group.mat-primary .mat-ink-bar, .what-we-do .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+    background: #ff8e3f;    
+}
+.what-we-do .mat-tab-body-content{
+    overflow: visible;
+}
+.contact{
+    background: #F7F7F7;
+    padding-bottom: 50px;
+}
+
+footer{
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: #303133;
+    padding-bottom:36px;
+}
+@media (max-width:767px){
+    footer{
+        text-align: center;
+    }
+    footer .text-right{
+        text-align: center !important;
+    }
+}
+
+.mat-input-element {
+    caret-color: #ff8e3f !important;
+}
+.mat-focused .mat-form-field-label {
+    color: #ff8e3f !important
+}
+.mat-form-field-ripple {
+    background-color: #ff8e3f !important;
+}

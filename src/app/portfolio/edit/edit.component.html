@@ -1,0 +1,72 @@
+<div class="head_txt_area">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2>Start Your Project</h2>
+        <p class="text-center">We’re excited for your next website, <br>We just need few information about your next project</p>
+      </div>
+    </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2">
+            <div class="form_sec">
+              <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+                <aside>
+                  <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Project Name" value="" formControlName="name">
+                  </mat-form-field>
+                </aside>
+                <aside>
+                  <mat-form-field class="example-full-width">
+                      <textarea matInput placeholder="Project Detail" formControlName="detail"></textarea>
+                  </mat-form-field>
+                </aside>
+                <aside>
+                  <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Client" formControlName="client">
+                  </mat-form-field>
+                </aside>
+                <aside>
+                  <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Link" formControlName="link">
+                  </mat-form-field>
+                </aside>
+                <aside class="checkboxes">
+                  <p class="head">Select Skills</p>
+                  <div class="row">
+                    <mat-checkbox class="col-sm-6 col-md-4" formControlName="front_end">Front-End Development</mat-checkbox>
+                    <mat-checkbox class="col-sm-6 col-md-4" formControlName="psd_to_html">PSD to HTML</mat-checkbox>
+                    <mat-checkbox class="col-sm-6 col-md-4" formControlName="html5_css3_less">HTML5/CSS3/LESS</mat-checkbox>
+                    <mat-checkbox class="col-sm-6 col-md-4" formControlName="jquery">jQuery</mat-checkbox>
+                    <mat-checkbox class="col-sm-6 col-md-4" formControlName="pixel_perfect">Pixel Perfect</mat-checkbox>
+                    <mat-checkbox class="col-sm-6 col-md-4" formControlName="responsive">Responsive</mat-checkbox>
+                    <mat-checkbox class="col-sm-6 col-md-4" formControlName="seo_friendly">SEO Friendly</mat-checkbox>
+                    <mat-checkbox class="col-sm-6 col-md-4" formControlName="railo">Railo</mat-checkbox>
+                    <mat-checkbox class="col-sm-6 col-md-4" formControlName="testing">Testing</mat-checkbox>
+                    <mat-checkbox class="col-sm-6 col-md-4" formControlName="optimisation">Optimisation</mat-checkbox>
+                  </div>
+                </aside>
+                <aside>
+                    <div>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Thumb Link" formControlName="thumb">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Main Link" formControlName="main_img">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Slider Image 1" formControlName="slider_img1">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Slider Image 1" formControlName="slider_img2">
+                    </mat-form-field>
+                    </div>
+                </aside>
+                <aside>
+                  <button class="btn" type="submit">Send Details</button>
+                </aside>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

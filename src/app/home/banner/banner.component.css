@@ -1,0 +1,13 @@
+*{
+    color:#fff;
+    text-align: center;
+}
+h1{
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+h1 span{
+    font-weight: bold;
+    font-size: 150%;
+}

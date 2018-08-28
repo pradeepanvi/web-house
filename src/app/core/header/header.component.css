@@ -1,0 +1,54 @@
+.logo, .bottom_txt{
+    width:100%;
+}
+.navbar-nav, .navbar-nav ul{
+    margin:0;
+    padding:0;
+}
+.navbar-nav li{
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.navbar-nav li a{
+    color: inherit;
+    padding: 0.2rem 1rem;
+}
+.navbar-nav li ul{
+    font-size: 80%;
+}
+@media (min-width:992px){
+    .navbar-nav li ul{
+        position: relative;
+        height: 10%;
+        transition: 0.5s all;
+    }
+    .navbar-nav li:hover ul{
+        height: 100%;
+    }
+}
+@media (max-width:991px){
+    .bottom_txt{
+        display: none;
+    }
+    button + .collapse{
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s all;
+        transform: translateY(100px)
+    }
+    button.open + .collapse{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    .navbar{
+        width: 100%;
+    }
+    .navbar .navbar-toggler{
+        position: absolute;
+        top: -36px;
+        right:0;
+    }
+}
