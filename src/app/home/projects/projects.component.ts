@@ -14,7 +14,7 @@ export class ProjectsComponent implements OnInit, DoCheck {
 
   ngOnInit() {
     this.projects = this.projectService.getProjects();
-    console.log(this.projects);
+    console.log(this.projectService.getAllProjects());
   }
   ngDoCheck(){
     //this.projects = this.projectService.getProjects();

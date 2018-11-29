@@ -14,7 +14,7 @@ export class ListComponent implements OnInit {
 
   ngOnInit() {
     this.projects = this.projectService.getProjects();
-    console.log(this.projects);
+    this.projectService.getAllProjects();
   }
 
 }

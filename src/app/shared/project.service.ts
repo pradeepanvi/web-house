@@ -1,23 +1,43 @@
+import { Injectable } from "@angular/core";
+import { Http, Response } from "@angular/http";
+
+import "rxjs/Rx";
 import { Subject } from "rxjs/Subject";
 import { Project } from "./project.model";
 
+@Injectable()
 export class ProjectService {
     projectsChanged = new Subject<Project[]>();
     private projects: Project[] = [];
+
+    //private apiUrl = 'https://address-book-demo.herokuapp.com/api/contacts';
+    private apiUrl = 'http://localhost:3000/projects/';
+    data: any = {}
+  
+
+    constructor(private http: Http){}
 
     setProjects(projects: Project[]){
         this.projects = projects;
         this.projectsChanged.next(this.projects.slice());
     }
 
+    getAllProjects(){
+        return this.http.get(this.apiUrl)
+            .map((res: Response) => res.json())
+            .subscribe(data => {
+                console.log(data);
+            });
+    }
+
     getProjects(){
-        console.log(this.projects);
         return this.projects.slice();
     }
     getProject(index:number){
         return this.projects[index];
     }
     addProject(project: Project){
+        //this.http.post('http://localhost:3000/projects/', 'Hii');
         this.projects.push(project);
         this.projectsChanged.next(this.projects.slice());
     }
